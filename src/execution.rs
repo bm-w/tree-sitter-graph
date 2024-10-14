@@ -197,7 +197,7 @@ impl Stanza {
 }
 
 pub struct Match<'a, 'tree> {
-    mat: QueryMatch<'a, 'tree>,
+    mat: &'a QueryMatch<'a, 'tree>,
     full_capture_index: u32,
     named_captures: Vec<(&'a str, CaptureQuantifier, u32)>,
     query_location: Location,
